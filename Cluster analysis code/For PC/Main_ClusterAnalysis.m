@@ -7,11 +7,12 @@ close all
 
 %1)Write the name of the dataset that you want to study below
 %If it is a synthetic dataset, please only change ExampleOne part.
-DatasetName='ExampleOne_DatasetForClusterAnalysis.txt';
+%DatasetName="ExampleOne_DatasetForClusterAnalysis.txt";
+DatasetName="allElepos.txt";
 
 %2) Parameters used by hdbscanImanSecond.py are
-MinClusterSizeHDBSCAN=25; %minimum number of atoms in a detected cluster
-MinSamplesHDBSCAN=13;     %This parameter has a significant effect on clustering.
+MinClusterSizeHDBSCAN=52; %minimum number of atoms in a detected cluster
+MinSamplesHDBSCAN=12;     %This parameter has a significant effect on clustering.
     %It provides a measure of how conservative you want your clustering to be.
     %The larger the value you provide, the more conservative the clustering and
     %more points will be declared as noise and clusters will be 
@@ -32,8 +33,8 @@ hdbscanProbabilityThreshold=0.50;%0.55
 
 %4) Three parametrs used by debaclImanSecond.py are p, k and gamma.
 %pDeBaCl=3; No need anymore. It is done in %p: The dimension of the dataset. (i.e., 2D or 3D) 
-kDeBaCl=8; %k: Number of observations to consider as neighbor to a given point 
-gammaDeBaCl=21;%30%gamma: Leaf nodes with fewer than this number (i.e., prune_threshold or 
+kDeBaCl=9; %k: Number of observations to consider as neighbor to a given point 
+gammaDeBaCl=45;%30%gamma: Leaf nodes with fewer than this number (i.e., prune_threshold or 
     % gamma)of members are recursively merged into larger nodes. 
     % If prune_threshold is set to 'None' (the default) in debaclImanSecond.py, 
     % then no pruning is performed. We cannot do this action here, because

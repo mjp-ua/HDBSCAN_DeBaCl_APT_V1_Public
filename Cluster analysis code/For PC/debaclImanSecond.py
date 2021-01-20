@@ -41,5 +41,5 @@ np.savetxt('DeBaClTempOutputs/DeBaCl_labels.txt',labels,fmt='%d %d')
 leaves = tree.get_leaf_nodes()
 labels = tree.get_clusters()
 fig = tree.plot(form='mass', color_nodes=leaves, colormap=plt.cm.jet)[0]
-fig.show()
+#fig.show()
 fig.savefig('DeBaClTempOutputs/DeBaCl_plot.png',dpi=(300))

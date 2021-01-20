@@ -7,6 +7,6 @@ function FinalMainFolderCleanUp(DatasetName)
     movefile *.tiff FinalResults\
     movefile *.fig FinalResults\
     movefile *.txt FinalResults\
-    copyfile(['FinalResults/' DatasetName])
+    %copyfile(['FinalResults/', DatasetName])
     disp('Please find the final results in "FinalResults" folder')
 end
